@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink, useNavigate } from "react-router-dom"
-import './Navbar.css';
+import './NavBar.css';
 import searchImg from "../../assets/search.png"
 import { useCart } from '../../context/CartContext'
 import carrito from "../../assets/carrito.png"
