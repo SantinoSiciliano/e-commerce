@@ -1,0 +1,139 @@
+/* Contenedor principal de la pantalla de compra */
+.buy-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .buy-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Sección de formulario */
+  .form-section {
+    margin-bottom: 30px;
+  }
+  
+  .form-heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #333;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  /* Botones de entrega */
+  .delivery-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .delivery-btn {
+    padding: 12px 25px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .delivery-btn:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .delivery-btn.active {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+    font-weight: 600;
+  }
+  
+  /* Mapa de retiro */
+  .map-frame {
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: 0.3s;
+  }
+  
+  /* Botón de pago */
+  .buttons-container {
+    text-align: center;
+  }
+  
+  .buy-btn {
+    padding: 14px 35px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .buy-btn:hover {
+    background-color: #333;
+  }
+  
+  .buy-btn:active {
+    background-color: #555;
+  }
+
+
+
+
+  .alert {
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .alert.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+  }
+  
+  

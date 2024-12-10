@@ -1,0 +1,93 @@
+.footer {
+    padding: 40px;
+    background-color: #fff;
+    color: #000;
+    border-top: 1px solid #E7EFED;
+    margin-top: 100px;
+  }
+  
+  .footer__sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer__section__info-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .footer__list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer__list-item {
+    margin-bottom: 10px;
+  }
+  
+  .footer__link {
+    text-decoration: none;
+    color: #706b6b;
+    transition: color 0.3s;
+  }
+  
+  .footer__link:hover {
+    color: #000;
+  }
+  
+  .footer__copy-paragraph {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .footer__sections {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer__section__info,
+    .footer__section__moda,
+    .footer__section-team,
+    .footer__section-social {
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Estilos para tabletas y pantallas medianas */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .footer__sections {
+      flex-wrap: wrap;
+    }
+  
+    .footer__section__info,
+    .footer__section__moda,
+    .footer__section-team,
+    .footer__section-social {
+      flex: 1 1 45%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  /* Estilos para pantallas grandes */
+  @media (min-width: 1025px) {
+    .footer__section__info,
+    .footer__section__moda,
+    .footer__section-team,
+    .footer__section-social {
+      flex: 1 1 20%;
+    }
+  
+    .footer__copy-paragraph {
+      margin-top: 40px;
+    }
+  }

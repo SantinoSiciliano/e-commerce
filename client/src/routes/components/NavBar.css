@@ -1,0 +1,100 @@
+
+.search__cont {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search__border {
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    margin-right: 10px; 
+  }
+  
+  .lupa {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .lupa img {
+    display: block;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .search__border::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+  }
+  
+  .search__border::-ms-clear {
+    display: none;
+  }
+
+  .cart-icon img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .cart-icon img:hover {
+    transform: scale(1.1);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    list-style: none;
+    margin: 5px 0 0;
+    padding: 10px 0;
+    display: none; /* Oculto por defecto */
+  }
+  
+  .dropdown-item {
+    padding: 8px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f7f7f7;
+    color: #000000;
+  }
+  
+  
+  /* Eliminar el fondo azul y el borde predeterminado en los enlaces */
+.dropdown-item:focus {
+  background-color: transparent;
+  color: inherit;
+  outline: none; /* Quita el borde de enfoque */
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1; /* Fondo claro al pasar el mouse */
+  color: #333; /* Color del texto */
+}

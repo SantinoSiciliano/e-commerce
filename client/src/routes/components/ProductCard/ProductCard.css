@@ -1,0 +1,92 @@
+
+
+
+.card {
+    width: 100%;
+    max-width: 27rem;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .price-text {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .minimal-btn {
+    background-color: transparent;
+    border: 1px solid #000000;
+    color: #000000;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .minimal-btn:hover {
+    background-color: #000000;
+    color: #fff;
+    border-color: #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .minimal-btn:active {
+    background-color: #555;
+    border-color: #000000;
+  }
+  
+  .minimal-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Media queries para responsividad */
+  @media (max-width: 575px) {
+    .card {
+      max-width: 100%;
+    }
+  
+    .card-title {
+      font-size: 1rem;
+    }
+  
+    .price-text {
+      font-size: 0.9rem;
+    }
+  
+    .minimal-btn {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  }
+  
+  
+  
