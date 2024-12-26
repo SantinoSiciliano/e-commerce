@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
@@ -61,7 +70,7 @@ const BuyScreen = () => {
       const { id } = await response.json();
 
       // Integración con MercadoPago
-      const mp = new window.MercadoPago("APP_USR-c941f6c9-cf85-44ca-9d33-802ad0924625", {
+      const mp = new window.MercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, {
         locale: "es-AR",
       });
 
