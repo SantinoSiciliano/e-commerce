@@ -12,7 +12,7 @@ import productImage33 from '../assets/product33.png';
 import productImage34 from '../assets/product34.png';
 import productImage35 from '../assets/product35.png';
 import productImage36 from '../assets/Product36.png';
-import productImage37 from '../assets/product37.png';
+import productImage37 from '../assets/Product37.png';
 
 export const products = [
   { id: "r1", title: "NOCTA"                       , brand: "Nike", price: 45, imgSrc: productImage10 },
