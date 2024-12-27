@@ -1,18 +1,18 @@
 import './Products.css'
 import { ProductCard } from "./components/ProductCard/ProductCard"
 import { useState } from 'react';
-import productImage10 from '@assets/product10.png';
-import productImage11 from '@assets/product11.png';
-import productImage28 from '@assets/product28.png';
-import productImage31 from '@assets/product31.png';
-import productImage30 from '@assets/product30.png';
-import productImage32 from '@assets/product32.png';
-import productImage29 from '@assets/product29.png';
-import productImage33 from '@assets/product33.png';
-import productImage34 from '@assets/product34.png';
-import productImage35 from '@assets/product35.png';
-import productImage36 from '@assets/product36.png';
-import productImage37 from '@assets/product37.png';
+import productImage10 from '../assets/product10.png';
+import productImage11 from '../assets/product11.png';
+import productImage28 from '../assets/product28.png';
+import productImage31 from '../assets/product31.png';
+import productImage30 from '../assets/product30.png';
+import productImage32 from '../assets/product32.png';
+import productImage29 from '../assets/product29.png';
+import productImage33 from '../assets/product33.png';
+import productImage34 from '../assets/product34.png';
+import productImage35 from '../assets/product35.png';
+import productImage36 from '../../src/assets/product36.png';
+import productImage37 from '../assets/product37.png';
 
 export const products = [
   { id: "r1", title: "NOCTA"                       , brand: "Nike", price: 45, imgSrc: productImage10 },
