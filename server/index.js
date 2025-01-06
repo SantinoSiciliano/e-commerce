@@ -1,12 +1,21 @@
+
+
+
+
+
+
+
+
+
 import express from "express";
 import cors from "cors";
 import { MercadoPagoConfig, Preference } from 'mercadopago';
 
 const client = new MercadoPagoConfig({
-  accessToken: process.env.MERCADOPAGO_ACCESS_TOKEN,
+  accessToken: "APP_USR-3454024281803797-092514-5d68c3c06ed9a8e4a8dc4d55d85f2e47-813565032",
 });
 
-const app = express(); 
+const app = express();
 const port = 3000;
 
 app.use(cors());
@@ -28,9 +37,9 @@ app.post("/api/create-preference", async (req, res) => {
         currency_id: "ARS",
       })),
       back_urls: {
-        success: `${process.env.FRONTEND_URL}/success`,
-        failure: `${process.env.FRONTEND_URL}/failure`,
-        pending: `${process.env.FRONTEND_URL}/pending`,
+        success: "ecommerce-portsici.vercel.app",
+        failure: "ecommerce-portsici.vercel.app",
+        pending: "ecommerce-portsici.vercel.app",
       },
       auto_return: "approved",
     };
@@ -51,8 +60,4 @@ app.post("/api/create-preference", async (req, res) => {
 
 app.listen(port, () => {
   console.log(`El servidor esta corriendo en el puerto ${port}`);
-});
-
-
-
-
+}); 

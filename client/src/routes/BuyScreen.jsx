@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
@@ -25,7 +34,6 @@ const BuyScreen = () => {
   });
 
   const [deliveryOption, setDeliveryOption] = useState("home");
-  const [alert, setAlert] = useState({ message: "", type: "" }); // Estado para la alerta
 
   const handleChange = (e, section) => {
     const { name, value } = e.target;
@@ -39,11 +47,11 @@ const BuyScreen = () => {
   const handlePay = async () => {
     try {
       if (!personalData.email || !personalData.firstName) {
-        setAlert({ message: "Por favor, completa los campos obligatorios.", type: "error" });
+        alert("Por favor, completa los campos obligatorios.");
         return;
       }
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/create-preference`, {
+      const response = await fetch("https://e-commerce-production-8e4b.up.railway.app/api/create-preference", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -61,7 +69,7 @@ const BuyScreen = () => {
       const { id } = await response.json();
 
       // Integración con MercadoPago
-      const mp = new window.MercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, {
+      const mp = new window.MercadoPago("APP_USR-c941f6c9-cf85-44ca-9d33-802ad0924625", {
         locale: "es-AR",
       });
 
@@ -73,7 +81,7 @@ const BuyScreen = () => {
       });
     } catch (error) {
       console.error("Error al procesar el pago:", error);
-      setAlert({ message: "Hubo un error al procesar el pago. Por favor, intenta nuevamente.", type: "error" });
+      alert("Hubo un error al procesar el pago. Por favor, intenta nuevamente.");
     }
   };
 
