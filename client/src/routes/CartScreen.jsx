@@ -4,9 +4,8 @@ import borrar from "../assets/borrar.png";
 
 const CartScreen = () => {
   const { items, removeItem, increaseItem, decreaseItem, clearCart } = useCart();
-  const navigate = useNavigate(); // Para redirigir a BuyScreen
+  const navigate = useNavigate();
 
-  // Si el carrito está vacío, mostrar el mensaje correspondiente
   if (items.length === 0) {
     return (
       <div className="container mt-5">
@@ -18,9 +17,8 @@ const CartScreen = () => {
 
   const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-  // Manejo de redirección a BuyScreen
   const handleProceedToCheckout = () => {
-    navigate("/buy", { state: { items, total } }); // Redirige a BuyScreen con los datos del carrito
+    navigate("/buy", { state: { items, total } });
   };
 
   return (
@@ -28,9 +26,9 @@ const CartScreen = () => {
       <h2 className="mb-4">Carrito de Compras</h2>
       <div className="cart-items">
         {items.map((item) => (
-          <div key={item.id} className="cart-item">
+          <div key={`${item.id}-${item.selectedSize}`} className="cart-item">
             <div className="cart-item-image">
-              <img src={item.imgSrc} alt={item.title} />
+              <img src={item.imgSrc || "/placeholder.svg"} alt={item.title} />
             </div>
             <div className="cart-item-details">
               <h3 className="detail__title">{item.title}</h3>
@@ -39,12 +37,12 @@ const CartScreen = () => {
             <div className="cart-item-actions">
               <p className="detail__price">${item.price.toFixed(2)}</p>
               <div className="quantity-control">
-                <button onClick={() => decreaseItem(item.id)} className="quantity-button">-</button>
+                <button onClick={() => decreaseItem(item.id, item.selectedSize)} className="quantity-button">-</button>
                 <span className="quantity">{item.quantity}</span>
-                <button onClick={() => increaseItem(item.id)} className="quantity-button">+</button>
+                <button onClick={() => increaseItem(item.id, item.selectedSize)} className="quantity-button">+</button>
               </div>
-              <button onClick={() => removeItem(item.id)} className="remove-button">
-                <img src={borrar} alt="Eliminar" />
+              <button onClick={() => removeItem(item.id, item.selectedSize)} className="remove-button">
+                <img src={borrar || "/placeholder.svg"} alt="Eliminar" />
               </button>
             </div>
           </div>
@@ -62,6 +60,8 @@ const CartScreen = () => {
 };
 
 export default CartScreen;
+
+
 
 
 

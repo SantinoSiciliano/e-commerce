@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 import './ProductsPage.css';
 import ProductCard from '../ProductCard/ProductCard';
 import productImage1 from '../../../assets/product1.png';
@@ -28,27 +37,24 @@ export const featuredProducts = [
   { id: "f12", title: "Air Jordan Wordmark", price: 60, imgSrc: productImage12, brand: "Jordan" },
 ];
 
-export const ProductsPage = () => {
+export const ProductsPage = () => { 
   return (
     <div> 
       <h2 className="title__cards">Productos Destacados</h2>
-      {/* Cards Section */}
-      <div>
-        <div className="item__list">
-          {featuredProducts.map((product) => (
-            <div className="item__zap" key={product.id}>
-              <ProductCard 
-                id={product.id}
-                title={product.title}
-                text={`$${product.price}`}
-                imgSrc={product.imgSrc}
-              />
-            </div>
-          ))}
-        </div>
+      <div className="item__list">
+        {featuredProducts.map((product) => (
+          <div className="item__zap" key={product.id}>
+            <ProductCard 
+              id={product.id}
+              title={product.title}
+              text={`$${product.price}`}
+              imgSrc={product.imgSrc}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
-}
+};
 
 export default ProductsPage;

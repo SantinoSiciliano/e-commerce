@@ -58,9 +58,9 @@ export const ZapatillasScreen = () => {
       </div>
       
       {/* Listado de productos filtrados */}
-      <div className="item__listpro">
+      <div className="item__list">
         {filteredProducts.map(product => (
-      <div className="item__prod" key={product.id}>
+      <div className="item__zap" key={product.id}>
         <ProductCard 
         id={product.id} // Pasa el ID aquí
         title={product.title}

@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 import './Products.css'
 import { ProductCard } from "./components/ProductCard/ProductCard"
 import { useState } from 'react';
@@ -61,9 +70,9 @@ export const PantalonesScreen = () => {
       </div>
       
       {/* Listado de productos filtrados */}
-      <div className="item__listpro">
+      <div className="item__list">
         {filteredProducts.map(product => (
-          <div className="item__prod" key={product.id}>
+          <div className="item__zap" key={product.id}>
             <ProductCard 
               id={product.id}
               title={product.title}

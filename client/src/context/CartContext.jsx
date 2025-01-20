@@ -8,10 +8,13 @@ export function CartProvider({ children }) {
 
   const addItem = (product) => {
     setItems((currentItems) => {
-      const existingItem = currentItems.find((item) => item.id === product.id);
-      if (existingItem) {
-        return currentItems.map((item) =>
-          item.id === product.id
+      const existingItemIndex = currentItems.findIndex(
+        (item) => item.id === product.id && item.selectedSize === product.selectedSize
+      );
+      
+      if (existingItemIndex !== -1) {
+        return currentItems.map((item, index) =>
+          index === existingItemIndex
             ? { ...item, quantity: item.quantity + 1 }
             : item
         );
@@ -20,22 +23,26 @@ export function CartProvider({ children }) {
     });
   };
 
-  const removeItem = (id) => {
-    setItems((currentItems) => currentItems.filter((item) => item.id !== id));
+  const removeItem = (id, selectedSize) => {
+    setItems((currentItems) => 
+      currentItems.filter((item) => !(item.id === id && item.selectedSize === selectedSize))
+    );
   };
 
-  const increaseItem = (id) => {
+  const increaseItem = (id, selectedSize) => {
     setItems((currentItems) =>
       currentItems.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+        item.id === id && item.selectedSize === selectedSize
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
       )
     );
   };
 
-  const decreaseItem = (id) => {
+  const decreaseItem = (id, selectedSize) => {
     setItems((currentItems) =>
       currentItems.map((item) =>
-        item.id === id && item.quantity > 1
+        item.id === id && item.selectedSize === selectedSize && item.quantity > 1
           ? { ...item, quantity: item.quantity - 1 }
           : item
       ).filter((item) => item.quantity > 0)
@@ -76,5 +83,7 @@ export function useCart() {
 CartProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
+
 
 

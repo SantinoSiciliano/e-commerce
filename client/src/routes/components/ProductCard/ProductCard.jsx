@@ -1,9 +1,18 @@
-import './ProductCard.css'
+
+
+
+
+
+
+
+
+
+import './ProductCard.css';
 import { Link } from "react-router-dom";
 
-export const ProductCard = ({ id, title, text , imgSrc }) => {
+export const ProductCard = ({ id, title, text, imgSrc }) => {
   return (
-    <div className="card" style={{ width: '27rem' }}>
+    <div className="card">
       <img src={imgSrc} className="card-img-top" alt={title} />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
@@ -12,6 +21,6 @@ export const ProductCard = ({ id, title, text , imgSrc }) => {
       </div>
     </div>
   );
-}
+};
 
 export default ProductCard;
