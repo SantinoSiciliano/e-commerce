@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import './ProductCard.css';
 import { Link } from "react-router-dom";
 

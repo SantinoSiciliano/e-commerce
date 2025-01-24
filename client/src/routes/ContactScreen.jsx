@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import './ContactScreen.css'; 
 import { useState } from 'react';
 

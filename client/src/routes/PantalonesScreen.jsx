@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import './Products.css'
 import { ProductCard } from "./components/ProductCard/ProductCard"
 import { useState } from 'react';

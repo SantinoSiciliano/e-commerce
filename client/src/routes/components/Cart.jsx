@@ -1,4 +1,4 @@
-import { useCart } from './CartContext'; // Ajusta la ruta
+import { useCart } from './CartContext'; 
 
 const Cart = () => {
   const { cartItems, removeFromCart } = useCart();
