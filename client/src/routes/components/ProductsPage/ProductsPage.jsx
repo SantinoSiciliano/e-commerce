@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import './ProductsPage.css';
 import ProductCard from '../ProductCard/ProductCard';
 import productImage1 from '../../../assets/product1.png';
